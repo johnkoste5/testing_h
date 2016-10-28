@@ -1,0 +1,12 @@
+<form action = "/users" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = "text" name = "user[first_name]">
+	<input type = "text" name = "user[last_name]">
+	<input type = "text" name = "user[email]">
+	<input type = "text" name = "user[password]">
+	<input type = "submit" value = "Create User">	
+</form>
+
+<% if flash[:errors]%>
+	<%= flash[:errors] %>
+<% end %>

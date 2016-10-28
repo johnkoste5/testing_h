@@ -1,0 +1,11 @@
+<h1>THis is my users index page</h1>
+
+
+<% @users.each do |user| %>
+	<h1><%= user.name %></h1>
+	<h2><%= user.email %></h2>
+	<a href = "/users/<%= user.id%>/edit">Edit User</a>
+	<a href = "/users/<%= user.id%>">Show User</a>
+	<% end %>
+
+<a href = "/users/new">Create a new User</a>
